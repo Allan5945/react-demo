@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import List from './template/a'
+import Index from './page/index'
 
 ReactDOM.render(
-    <List/>,
+    <Index/>,
     document.getElementById('app')
 )

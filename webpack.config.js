@@ -18,18 +18,15 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test: /\.css$/,
-                use: ['css-loader', 'style-loader']
-            },
-            {
-                test: /\.scss$/,
-                use: ['sass-loader']
+                test: /(\.css|\.scss)$/,
+                use: ['style-loader','css-loader','sass-loader'],
+                exclude: /node_modules/
             }
         ]
     },
     devtool: '#eval-source-map',
     devServer: {
-        contentBase: [ path.join(__dirname, "dist")],//本地服务器所加载的页面所在的目录
+        contentBase: [ path.join(__dirname)],//本地服务器所加载的页面所在的目录   ** 如果使用htmlWebpackPlugin插件则这个配置生效  - 建议使用 htmlWebpackPlugin
         historyApiFallback: true, //不跳转
         hot: true,
         open:true,
@@ -58,7 +55,7 @@ module.exports = {
     plugins: [
         new htmlWebpackPlugin({
             template:"index.html",
-            filename:'./dist/index.html',
+            filename:'index.html',
         }),
         new webpack.HotModuleReplacementPlugin()
     ]
