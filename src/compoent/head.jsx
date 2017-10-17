@@ -1,10 +1,10 @@
 import React from 'react'
 
-class Nava extends React.Component{
+class Head extends React.Component{
     render(){
         return <div>
-            111
+            111222aaa
         </div>
     }
 }
-export {Nava}
+export {Head}
