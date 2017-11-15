@@ -4,10 +4,10 @@ import Err from './../page/err'
 import Login from './../page/login'
 
 const routes = [
-    { path: '/index',
+    { path: '/',
       component: Index,
       routes: [
-        { path: '/index/login',
+        { path: '/login',
           component: Login
         }
       ]

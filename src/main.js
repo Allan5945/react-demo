@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {routes as routerConfig} from './routers/router'
+// import {routes as routerConfig} from './routers/router'
 
 import Index from './page/index'
 import Err from './page/err'
@@ -15,16 +15,17 @@ import {
     withRouter
 } from 'react-router-dom'
 
+import RouteConfigExample from './routers/test'
 
-
-
+// window.location.href='/index';
 class MainBox extends React.Component{
     render(){
         return<Router>
             <div>
                 <Switch>
-                    {/* <Redirect from='/' to='index'/> */}
-                    <Route exact  path='/index' component={Index}></Route>
+                    {/*<Redirect exact from='/' to='/index'/>*/}
+                    <Route path='/' component={Index}></Route>
+                    <Route path='/index' component={Login}></Route>
                     <Route component={Err}></Route>
                 </Switch>
             </div>
@@ -33,6 +34,6 @@ class MainBox extends React.Component{
 }
 
 ReactDOM.render(
-    <MainBox/>,
+    <RouteConfigExample />,
     document.getElementById('app')
 )
