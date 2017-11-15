@@ -31,13 +31,13 @@ module.exports = {
         hot: true,
         open:true,
         inline: true,//实时刷新
-        port:8090,  // 指定要监听请求的端口号
+        port:8091,  // 指定要监听请求的端口号
         // host: "127.0.0.1",  // 默认是localhost，开启将可以让外部设备访问到
         https: false,
         noInfo:true,     //启动时和每次保存之后那些显示的 webpack 包(bundle)信息」的消息将被隐藏。错误和警告仍然会显示。\
         lazy:false,     //开启 webpack 不会监视任何文件改动
         headers: {},    //在所有请求中添加首部内容：
-        openPage:"index.html",  // 修改默认打开的页面
+        // openPage:"index.html",  // 修改默认打开的页面
         proxy:{   // 代理请求
             // '**': {  // 本地请求的地址   localhost:8088/engineer/*
             //     target: 'www.baidu.com',  // 转发请求的地址  http://dws.XXXXX.com
