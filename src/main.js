@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {routes as routerConfig} from './routers/router'
+import RouteConfigExample from './routers/router'
 
 import Index from './page/index'
 import Err from './page/err'
@@ -33,6 +33,6 @@ class MainBox extends React.Component{
 }
 
 ReactDOM.render(
-    <MainBox/>,
+    <RouteConfigExample/>,
     document.getElementById('app')
 )
