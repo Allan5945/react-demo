@@ -1,10 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import RouteConfigExample from './routers/router'
+import MainBox from './routers/router'
 
-import Index from './page/index'
-import Err from './page/err'
-import Login from './page/login'
+import './public/css.css'
+
 import {
     BrowserRouter as Router,
     PrivateRoute,
@@ -16,23 +15,7 @@ import {
 } from 'react-router-dom'
 
 
-
-
-class MainBox extends React.Component{
-    render(){
-        return<Router>
-            <div>
-                <Switch>
-                    {/* <Redirect from='/' to='index'/> */}
-                    <Route exact  path='/index' component={Index}></Route>
-                    <Route component={Err}></Route>
-                </Switch>
-            </div>
-        </Router>
-    }
-}
-
 ReactDOM.render(
-    <RouteConfigExample/>,
+    <MainBox/>,
     document.getElementById('app')
 )

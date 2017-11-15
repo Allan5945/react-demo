@@ -16,12 +16,7 @@ class Index extends React.Component{
     render(){
         return<div>
             <div>
-                <Router>
-                    <div>
-                        <Route path='/login' component={Head}></Route>
-                    </div>
-                </Router>
-                <Body/>
+                index
             </div>
         </div>
     }
