@@ -1,8 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import MainBox from './routers/router'
-
-import './public/css.css'
+import './/public/index.scss'
 
 import {
     BrowserRouter as Router,

@@ -1,6 +1,5 @@
 
 import React from 'react'
-import './../style/index.scss'
 import {Head} from './../compoent/head'
 import {Body} from './../compoent/body'
 import {

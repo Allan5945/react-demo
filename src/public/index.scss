@@ -1,0 +1,28 @@
+html,body,#app,#box{
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+}
+.login-box{
+  width: 100%;
+  height: 100%;
+  background-color: rebeccapurple;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.login-tip{
+  margin: 80px 0 30px 0;
+  text-align: center;
+  font-size: 2rem;
+}
+.login-img{
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+.login-from{
+
+}
