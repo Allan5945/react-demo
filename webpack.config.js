@@ -43,14 +43,11 @@ module.exports = {
         headers: {},    //在所有请求中添加首部内容：
         // openPage:"index.html",  // 修改默认打开的页面
         proxy:{   // 代理请求
-            // '**': {  // 本地请求的地址   localhost:8088/engineer/*
-            //     target: 'www.baidu.com',  // 转发请求的地址  http://dws.XXXXX.com
-            //     pathRewrite: {"^/api" : ""}  //如果你不想始终传递 /api ，则需要重写路径：
-            // },
-            // "/api": {
-            //     target: "http://localhost:3000",
-            //     pathRewrite: {"^/api" : ""}
-            // }
+            "**": {
+                target: "http://localhost:8050",
+                changeOrigin: true,
+                secure: false
+            }
         }
     },
     resolve:{   // 扩展名

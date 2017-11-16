@@ -26,15 +26,15 @@ html,body,#app,#box{
 .login-c{
   width: 100%;
   height: 100%;
-  display: flex;
   flex-flow: column nowrap;
   align-items: center;
   position: absolute;
   top: 0;
   left: 0;
-}
-.login-h{
   display: none;
+}
+.login-show{
+  display: flex;
 }
 .login-tip{
   margin: 80px 0 30px 0;
@@ -47,5 +47,63 @@ html,body,#app,#box{
   background-color: red;
 }
 .login-from{
-
+  margin: 160px 0 0 0 ;
+  width: 80%;
+  //background-color: rebeccapurple;
+  input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding-left: 15px;
+    font-size: 16px;
+    color: white;
+    letter-spacing: 2px;
+    flex: 1;
+  }
+}
+.login-i{
+  border-bottom: 1px solid rgba(119, 119, 119, 0.7);
+  height: 55px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding-left: 10px;
+  >span{
+    font-family: iconfont;
+    font-size: 18px;
+  }
+}
+::-webkit-input-placeholder{
+      color: rgba(203, 203, 203,.7);
+      font-size: 14px;
+      letter-spacing: 1.5px;
+  }
+.login-setting{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  color: rgba(203, 203, 203,.7);
+  height: 50px;
+  align-items: center;
+  padding: 0 10px;
+}
+.login-sub{
+  height: 50px;
+  background-color: rebeccapurple;
+  border-radius: 35px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 17px;
+  margin: 100px 0 0 0;
+}
+.login-link{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin-top: 35px;
+  >div{
+    font-family: iconfont;
+    font-size: 43px;
+    margin:  0 25px 0 25px;
+  }
 }
