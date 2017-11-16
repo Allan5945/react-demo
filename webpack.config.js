@@ -21,7 +21,11 @@ module.exports = {
                 test: /(\.css|\.scss)$/,
                 use: ['style-loader','css-loader','sass-loader'],
                 exclude: /node_modules/
-            }
+            },
+            {
+                test: /\.(png|jpg|gif|svg)$/,
+                loader: "url-loader?limit=1000&name=img/[name][hash:8].[ext]"
+            },
         ]
     },
     devtool: '#eval-source-map',
