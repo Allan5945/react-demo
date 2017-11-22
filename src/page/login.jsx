@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 
+
 class Login extends React.Component {
     constructor(props) {
         super(props);
@@ -22,35 +23,33 @@ class Login extends React.Component {
     }
     handleClick() {
         let userName,pwd;
-        // $.ajax({
-        //     url:"/login",
-        //     type:"post",
-        //     data:{
-        //         pwd:123,
-        //         userName:789
-        //     },
-        //     success:function(d){
-        //         console.log(d)
-        //     }
-        // })
-        axios({
-            method: 'post',
-            url: '/login',
-            headers: {
-                'Content-type': 'application/x-www-form-urlencoded'
-            },
-            params: {
-                userName:this.state.userName,
-                pwd:this.state.pwd
-            }
-        })
-            .then((response) => {
-                console.log(response);
+        if(this.state.userName != '' && this.state.pwd != ''){
+            axios({
+                method: 'post',
+                url: 'obtain/login',
+                headers: {
+                    'Content-type': 'application/x-www-form-urlencoded'
+                },
+                params: {
+                    userName:this.state.userName,
+                    pwd:this.state.pwd
+                }
             })
-            .catch((error) => {
-                console.log(error);
-            }
-        );
+                .then((response) => {
+                    if(response.data.mes){
+                        window.location.href = '/index';
+                    }else{
+                        alert('密码不正确')
+                    }
+                })
+                .catch((error) => {
+                    console.log(error);
+                }
+            );
+        }else{
+            alert('请先输入账号密码！')
+        }
+       
     }
 
     componentDidMount() {

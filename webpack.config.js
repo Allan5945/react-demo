@@ -43,11 +43,22 @@ module.exports = {
         headers: {},    //在所有请求中添加首部内容：
         // openPage:"index.html",  // 修改默认打开的页面
         proxy:{   // 代理请求
-            "**": {
-                target: "http://localhost:8050",
-                changeOrigin: true,
-                secure: false
+            "/obtain": {
+                target: 'http://localhost:8050',
+              changeOrigin: true,
+              secure: false,
+              bypass: function(req, res, proxyOptions) {
+                  // if(req.method == 'GET')return "/index.html";
+                  // if(req.url == '/'){
+                  //     return "/index.html"
+                  // };
+                  var urls = req.url;
+                  if(urls == '/' || urls.indexOf("html") != -1 || urls.indexOf("png") != -1 || urls.indexOf("jpg") != -1){
+                      return "/index.html"
+                  };
+              }
             }
+            
         }
     },
     resolve:{   // 扩展名

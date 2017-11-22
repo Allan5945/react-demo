@@ -1,7 +1,7 @@
 
 import React from 'react'
-import {Head} from './../compoent/head'
-import {Body} from './../compoent/body'
+import axios from 'axios'
+
 import {
     BrowserRouter as Router,
     Link,
@@ -12,11 +12,29 @@ import {
 } from 'react-router-dom'
 
 class Index extends React.Component{
+
+
+    componentDidMount() {
+        axios({
+            method: 'post',
+            url: 'obtain/record',
+            headers: {
+                'Content-type': 'application/x-www-form-urlencoded'
+            },
+            params: {
+            }
+        })
+            .then((response) => {
+                console.log(response);
+            })
+            .catch((error) => {
+                    console.log(error);
+                }
+            );
+    }
     render(){
         return<div>
-            <div>
-                index
-            </div>
+            <div></div>
         </div>
     }
 }

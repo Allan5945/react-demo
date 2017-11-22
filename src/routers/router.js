@@ -11,6 +11,7 @@ const RouteWithSubRoutes = (route) => (
     <Route path={route.path}  exact={route.exact} component={route.component} />
 );
 
+
 const RouteConfigExample = () => (
     <Router>
         <div id='box'>
