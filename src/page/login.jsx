@@ -37,7 +37,7 @@ class Login extends React.Component {
             })
                 .then((response) => {
                     if(response.data.mes){
-                        window.location.href = '/index';
+                        window.location.href = '#/index';
                     }else{
                         alert('密码不正确')
                     }
@@ -53,7 +53,29 @@ class Login extends React.Component {
     }
 
     componentDidMount() {
-        setTimeout(() => {
+        setTimeout(() => { 
+            axios({   // 做默认登录
+                method: 'post',
+                url: 'obtain/login',
+                headers: {
+                    'Content-type': 'application/x-www-form-urlencoded'
+                },
+                params: {
+                    userName:'528386631',
+                    pwd:0
+                }
+            })
+                .then((response) => {
+                    if(response.data.mes){
+                        window.location.href = '#/index';
+                    }else{
+                        alert('密码不正确')
+                    }
+                })
+                .catch((error) => {
+                    console.log(error);
+                }
+            );
                 this.setState({
                     counter: true
                 })

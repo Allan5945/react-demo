@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-    BrowserRouter as Router,
+    HashRouter as Router,
     Route,
     Link,
     Switch
@@ -10,7 +10,6 @@ import Err from './../page/err'
 const RouteWithSubRoutes = (route) => (
     <Route path={route.path}  exact={route.exact} component={route.component} />
 );
-
 
 const RouteConfigExample = () => (
     <Router>
